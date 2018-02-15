@@ -1,5 +1,4 @@
 {
-  "name": "crdwk",
   "private": true,
   "main": "webpack.config.js",
   "scripts": {

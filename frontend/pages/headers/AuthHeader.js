@@ -10,7 +10,7 @@ const headerStyle = {
 
 export default () => [
   <View key='Auth' style={headerStyle}>
-    <Text>Make it happen.</Text>
+    <Text>{'< slogan >'}</Text>
 
     <ErrorBoundary>
       <View style={{display: 'block'}}>
@@ -18,7 +18,7 @@ export default () => [
       </View>
     </ErrorBoundary>
 
-    <Text style={{fontWeight: 600}}>crdwk</Text>
+    <Text style={{fontWeight: 600}}>{'< logo >'}</Text>
   </View>,
 
   <View key='placeholder' style={{height: 85.5}}></View>,

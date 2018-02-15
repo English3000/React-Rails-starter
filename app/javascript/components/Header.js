@@ -28,7 +28,7 @@ const custom = {
 
 export default () => [
   <div key='Auth' style={headerStyle}>
-    <P>Make it happen.</P>
+    <P>{'< slogan >'}</P>
 
     <div style={custom.authForm}>
       <button style={Object.assign({}, custom.button, custom.signUp)}
@@ -53,7 +53,7 @@ export default () => [
       </div>
     </div>
 
-    <P style={{fontWeight: 600}}>crdwk</P>
+    <P style={{fontWeight: 600}}>{'< logo >'}</P>
   </div>,
   <div key='placeholder' style={{height: 85.5}}></div>,
 ];
