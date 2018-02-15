@@ -1,0 +1,20 @@
+<%= javascript_pack_tag 'application' %>
+
+<% if signed_in? %>
+  <script>
+    window.currentUser = <%= render(
+      "api/sessions/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  </script>
+<% end %>
+
+<script>
+  window.user = <%= render(
+    "api/sessions/user.json.jbuilder",
+    user: @user
+  ).html_safe %>
+</script>
+
+<%= react_component 'Header', prerender: true %>
+<%= react_component 'Profile', user: {id: @user.id, email: @user.email}, prerender: true %>

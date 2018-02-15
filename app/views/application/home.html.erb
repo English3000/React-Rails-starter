@@ -1,0 +1,13 @@
+<%= javascript_pack_tag 'application' %>
+
+<% if signed_in? %>
+  <script>
+    window.currentUser = <%= render(
+      "api/sessions/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  </script>
+<% end %>
+
+<%= react_component 'Header', prerender: true %>
+<%= react_component 'Home', prerender: true %>
