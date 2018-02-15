@@ -1,5 +1,7 @@
 ## [React-Rails](https://github.com/reactjs/react-rails#react-rails) Starter
 
+* **[MOBILE APP HERE](https://github.com/English3000/React-Rails-mobile)**
+
 ### Updates
 
 Refactored `Header` (now `AuthHeader`) & `Nav` into `Pages`!
@@ -12,17 +14,14 @@ Refactored `Header` (now `AuthHeader`) & `Nav` into `Pages`!
 
 - [x] server-side rendering (along with client-side)
 
-- [x] custom components for React Native integration
+- [x] custom components for [React Native integration](https://github.com/English3000/React-Rails-mobile)
 
 - [ ] `webpack-dev-server` config _(if you get it bug-free before I do, submit yours as an issue)_
 
-**React Native starter coming soon!**
+### To clone:
 
-### Upon cloning,
-
+* `git clone https://github.com/English3000/React-Rails-starter`
 * `bundle install`
 * `rails db:setup`
 
 If you haven't already, check out [iTerm2](https://www.iterm2.com/version3.html). When you do `rails s` & `webpack --watch`, you can have each in a horizontally-split frame and a third for command line navigation.
-
-Also, Expo's [XDE](https://docs.expo.io/versions/latest/introduction/installation.html) is great for development/testing.
