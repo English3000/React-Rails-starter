@@ -18,3 +18,5 @@
 
 <%= react_component 'Header', prerender: true %>
 <%= react_component 'Profile', user: {id: @user.id, email: @user.email}, prerender: true %>
+
+<%= javascript_pack_tag 'bundle' %>
