@@ -1,21 +1,17 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  skip_before_action :verify_authenticity_token
+  protect_from_forgery
 
-  helper_method :visited, :current_user, :signed_in?
+  helper_method :current_user, :signed_in?
 
   def home
-    visited = true
-  end
-
-  def visited
-    @visited ||= false
+    if signed_in?
+      @user = current_user
+      render :profile
+    end
   end
 
   def current_user
-    visited = true
-    return nil unless session[:session_token]
-    @current_user = User.find_by(session_token: session[:session_token])
+    @current_user ||= User.find_by(session_token: session[:session_token])
   end
 
   def signed_in?
@@ -28,7 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sign_out
-    current_user.reset_token
+    current_user.try(:reset_token)
     session[:session_token] = nil
   end
 end

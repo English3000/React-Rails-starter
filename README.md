@@ -4,6 +4,8 @@
 
 ### Updates
 
+Configured `axios` CSRF in `api.js`, adapted `application_controller.rb` to avoid errors caused by no CSRF.
+
 Revised production output path in `webpack.config.js`, added bundle tags in server-side views, added empty `bundle.js` in `app/javascript/packs`, added gem [`rack-cors`](https://github.com/cyu/rack-cors), and configured it in `config/application.rb`--client-side should now hydrate in production.
 
 Refactored `Header` (now `AuthHeader`) & `Nav` into `Pages`!

@@ -12,13 +12,11 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    if @user && visited # can test once Search implemented
+    if @user && params[:visited]
       render json: {id: @user.id, email: @user.email}
     elsif @user
-      visited = true
       render :show
     else
-      visited = true
       redirect_to '/'
     end
   end
